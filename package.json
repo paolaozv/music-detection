@@ -1,0 +1,25 @@
+{
+  "name": "api_music",
+  "version": "1.0.0",
+  "description": "Proyecto Musical usando API y librerias",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sthecrash/api_music.git"
+  },
+  "author": "Sthefany  , Paola , Fatima , Lili , Saris , Anabel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sthecrash/api_music/issues"
+  },
+  "homepage": "https://github.com/sthecrash/api_music#readme",
+  "dependencies": {
+    "cookie-parser": "1.3.2",
+    "express": "^4.14.0",
+    "querystring": "~0.2.0",
+    "request": "^2.34.0"
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/vendor/materialize.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+	<link rel="icon" href="img/favicon.png" type="image/x-icon" />
+</head>
+
+<body class="fondo-login">
+	<div class="logo center">
+		<img src="img/logo.png" alt="">
+	</div>
+	<div class="login">
+		<div class="container">
+			<div class="row">
+				<div class="col m5 push-m1">
+					<div class="botones">
+						<div class="fb">
+							<a id="facebook" class="btn btn-primary blue darken-3">Log in with Facebook</a>
+						</div>
+						<div class="spotify">
+							<div id="login">
+								<a href="/login" class="btn btn-primary green accent-4">Log in with Spotify</a>
+							</div>
+							<div id="loggedin">
+								<div id="user-profile"></div>
+								<div id="oauth"></div>
+								<button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="frase">
+					<div class="col m6">
+						<h4>Encuentra y disfruta la música de tus artistas favoritos </h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script id="user-profile-template" type="text/x-handlebars-template">
+		<h1>Logged in as {{display_name}}</h1>
+		<div class="media">
+			<div class="pull-left">
+				<img class="media-object" width="150" src="{{images.0.url}}" />
+			</div>
+			<div class="media-body">
+				<dl class="dl-horizontal">
+					<dt>Display name</dt>
+					<dd class="clearfix">{{display_name}}</dd>
+					<dt>Id</dt>
+					<dd>{{id}}</dd>
+					<dt>Email</dt>
+					<dd>{{email}}</dd>
+					<dt>Spotify URI</dt>
+					<dd><a href="{{external_urls.spotify}}">{{external_urls.spotify}}</a></dd>
+					<dt>Link</dt>
+					<dd><a href="{{href}}">{{href}}</a></dd>
+					<dt>Profile Image</dt>
+					<dd class="clearfix"><a href="{{images.0.url}}">{{images.0.url}}</a></dd>
+					<dt>Country</dt>
+					<dd>{{country}}</dd>
+				</dl>
+			</div>
+		</div>
+	</script>
+
+	<script id="oauth-template" type="text/x-handlebars-template">
+		<h2>oAuth info</h2>
+		<dl class="dl-horizontal">
+			<dt>Access token</dt>
+			<dd class="text-overflow">{{access_token}}</dd>
+			<dt>Refresh token</dt>
+			<dd class="text-overflow">{{refresh_token}}></dd>
+		</dl>
+	</script>
+
+	<script src="js/handlebars-v4.0.0.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/fb.js"></script>
+	<script type="text/javascript" src="js/spotify.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Buscar</title>
+	<link rel="stylesheet" href="css/vendor/materialize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+	<link rel="icon" href="img/favicon.png" type="image/x-icon" />
+</head>
+
+<body class="contenedor-voz">
+	<div class="row">
+		<div class="col m12">
+			<div class="perfil right">
+				<a href="#" data-activates="slide-out" class="btn button-collapse grey darken-4"><i class="material-icons menu">menu</i><span class="view">Ver Perfil</span></a>
+			</div>
+			<div class="buscar-voz">
+				<div class="logo center">
+					<a href="index.html"><img src="img/logo.png" alt=""></a>
+				</div>
+				<div class="mic center-align">
+					<i class="material-icons">mic</i>
+					<h4>Menciona la canción o artista que quieres escuchar</h4>
+					<div id="commands">
+						<h1>Play songs through voice commands</h1>
+						<p>This demo uses speech recognition and the <a href="https://developer.spotify.com/web-api/">Spotify Web API</a> to play songs. Try it using some of the commands below. Remember to allow the use of the microphone.</p>
+						<h2>Voice commands</h2>
+						<ul>
+							<li>Play {song name}</li>
+							<li>Play {song name} by {artist name}</li>
+						</ul>
+					</div>
+					<div id="conversation"></div>
+					<p>&copy; 2016 Apimusic.com</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<ul id="slide-out" class="side-nav">
+		<li>
+			<div class="userView">
+				<!--<div class="background">
+					<img src="images/office.jpg">
+				</div>-->
+				<a href="#!user"><img class="circle" src="img/img-1.jpg"></a>
+				<a href="#!name"><span class="name purple-text text-darken-2">John Doe</span></a>
+				<a href="#!email"><span class="email purple-text text-darken-2">jdandturk@gmail.com</span></a>
+			</div>
+		</li>
+		<li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+		<li><a href="#!">Second Link</a></li>
+		<li>
+			<div class="divider"></div>
+		</li>
+		<li><a href="resultado.html" class="purple-text text-darken-2">Youtube</a></li>
+		<li><a href="#!" class="purple-text text-darken-2">Cerrar Sesión</a></li>
+	</ul>
+	<script src="js/handlebars-v4.0.0.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+	<script src="js/search.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/vendor/materialize.js"></script>
+</body>
+
+</html>
