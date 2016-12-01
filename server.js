@@ -2,9 +2,9 @@ var express = require("express");
 var request = require("request");
 var querystring = require("querystring");
 var cookieParser = require("cookie-parser");
-var client_id = "a8556ddfad6a4136883d2c2dc6904f51";
-var client_secret = "97452f806f1743f38e00bebcfc606a49";
-var redirect_uri = "http://localhost:8085/search.html";
+var client_id = "bda428456fc147f89ece8caee923048e";
+var client_secret = "d69dc77937564d919ad3e5aaafaba744";
+var redirect_uri = "http://localhost:3005/index2.html";
 
 var generateRandomString = function(length) {
     var text = "";
@@ -118,6 +118,6 @@ app.get("/refresh_token", function(req, res) {
     });
 });
 
-app.listen(8085, function() {
-  console.log("Server encendido");
+app.listen(3005, function() {
+  console.log("Server encendido 3005");
 });
