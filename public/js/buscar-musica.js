@@ -1,4 +1,5 @@
 (function () {
+  $(".button-collapse").sideNav();
     var audio = new Audio();
 
     function searchTracks(query) {
@@ -13,7 +14,13 @@
                     var track = response.tracks.items[0];
                     audio.src = track.preview_url;
                     audio.play();
-                    communicateAction('<div>Playing ' + track.name + ' by ' + track.artists[0].name + '</div><img width="150" src="' + track.album.images[1].url + '">');
+                    communicateAction('<div class="re center">'+ 
+                                        '<div class="reproduciendo">Escuchando ' + 
+                                            '<strong>' + track.name + '</strong>' + ' de ' + 
+                                            '<strong>' + track.artists[0].name + '</strong>' + 
+                                        '</div>' +
+                                        '<img width="150" class="circle" src="' + track.album.images[1].url + '">' + 
+                                      '</div>');
                 }
             }
         });
@@ -63,7 +70,7 @@
 
                 ':nomatch': function (message) {
                 recognized(message);
-                communicateAction('Sorry, I don\'t understand this action');
+                communicateAction('<div class="mensaje-error">Lo sentimos, no se pudo completar la acción, vuelve a intentarlo</div>');
             }
         };
 
@@ -75,6 +82,6 @@
     }
 
     annyang.addCallback('error', function () {
-        communicateAction('error');
+        communicateAction('<div class="mensaje-error">El comando es incorrecto o la canción no ha sido encontrada</div>');
     });
 })();

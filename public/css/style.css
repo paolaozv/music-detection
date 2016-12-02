@@ -3,12 +3,29 @@
 	padding: 0px;
 	margin: 0px;
 }
+@keyframes latidos {
+  from { transform: none; }
+  50% { transform: scale(1.1); }
+  to { transform: none; }
+}
+
+@keyframes micro {
+  from { transform: none; }
+  50% { transform: scale(0.9); }
+  to { transform: none; }
+}
 
 html {
 	overflow: auto;
 }
 #body{
-	background-image: url("../img/portada.jpg");
+	background-image: url(../img/portada.jpg);
+	background-size: cover;
+}
+#body2{
+	/*background-color: rgba(175, 0, 236, 0.35);*/
+	background-image: url(../img/portada2.jpg);
+	background-repeat: no-repeat;
 	background-size: cover;
 }
 h1{
@@ -23,4 +40,100 @@ h1 +h3 {
 }
 .boton-iniciar-sesion {
 	padding-left: 18%;
+}
+.nav {
+	margin: 1%;
+	display: inline-block;
+/*	position: fixed !important;
+	top: -0.5%;*/
+}
+.nav .menu{
+	position: fixed !important;
+	animation: latidos 3s infinite;
+	background-color: #575656;
+	border: none;
+	display: inline-block;
+	padding: 0.3%;
+	border-radius: 5px;
+}
+.nav .menu i{
+	font-size: 200%;
+	color: #D7D1D1;
+	background-color: transparent;
+}
+h4{
+	font-size: 260% !important;
+	font-weight: bold !important;
+	word-spacing: 15px;
+	color: #0C2E58;
+}
+.comandos li{
+	font-size: 65% !important;
+	color: #081059;
+	font-weight: bold;
+}
+.micro{
+	margin-top: 4%;
+	animation: micro 1.5s infinite;
+}
+footer{
+	margin-top: 9%;
+}
+#salir{
+	background-color: #495FAF;
+	color: #2C2929;
+	display: inline-block;
+	border: transparent;
+	border-radius: 5px;
+	padding: 0 15%;
+}
+
+
+/*spotify*/
+
+
+.mensaje-error{
+	margin: 1% 0;
+	background-color: #676666;
+	color: #D0CACA;
+	padding: 0.7%;
+	border-radius: 5px;
+	width: 40%;
+	position: relative;
+	left: 60%;
+}
+
+.recognized div:first-child{
+	margin-top: 8% !important;
+}
+.recognized div{
+	background-color: #676666;
+	color: #D0CACA;
+	padding: 0.7%;
+	border-radius: 5px;
+	width: 30%;
+}
+.container{
+	width: 80% !important;
+}
+.re{
+	background-color: #676666;
+	color: #494545;
+	padding: 0.7%;
+	border-radius: 5px;
+	width: 40%;
+	position: relative;
+	left: 60%;
+}
+.re .reproduciendo{
+		margin: 1% 1% 3% 1%; 
+}
+
+.re .reproduciendo strong{
+	font-size: 120%;
+	color: #C1BDBD;
+}
+.re img{
+	/*margin-left: 33%;*/
+	margin-top: 3%;
 }
