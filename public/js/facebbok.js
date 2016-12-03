@@ -20,7 +20,7 @@ oauth    : true // habilita oauth 2.0
     if (response.authResponse) {
       FB.api('/me', function(me){
         if (me.name) {
-           window.location = "https://paolaozv.github.io/music-detection/index2.html";
+           window.location = "https://paolaozv.github.io/music-detection/public/index2.html";
         }
       })
     } 

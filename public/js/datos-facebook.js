@@ -73,7 +73,7 @@ window.fbAsyncInit = function() {
         }
       });
     } else {
-      window.location = "https://paolaozv.github.io/music-detection/index.html";
+      window.location = "https://paolaozv.github.io/music-detection/public/index.html";
     }
   });
 
