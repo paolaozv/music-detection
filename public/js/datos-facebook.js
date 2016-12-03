@@ -17,18 +17,18 @@ window.fbAsyncInit = function() {
   });
 
   FB.Event.subscribe('auth.statusChange', function(response) {
-      FB.api(
-        "...?fields={fieldname_of_type_CoverPhoto}",
-        function (me) {
-          if (me) {
-            var portada = '<div>{{portada}}</div>';
-            var por = "";
-            por += portada.replace("{{portada}}", '<img src="https://graph.facebook.com/' + me.id + '/picture">');
+      // FB.api(
+      //   "...?fields={fieldname_of_type_CoverPhoto}",
+      //   function (me) {
+      //     if (me) {
+      //       var portada = '<div>{{portada}}</div>';
+      //       var por = "";
+      //       por += portada.replace("{{portada}}", '<img src="https://graph.facebook.com/' + me.id + '/picture">');
 
-            $("#back").append(por);
-          }
-        }
-      );
+      //       $("#back").append(por);
+      //     }
+      //   }
+      // );
     // FB.api(
     //     "/{photo-id}",
     //     function (response) {
